@@ -1,5 +1,5 @@
 # Portfolio
 My GIS portfolio -> https://emilesebakara.github.io/sebakara/ <br>
-Welcome to my GIS portfolio — a site I personally built using HTML, CSS, and JavaScript. Here, you’ll find my résumé, professional experience, education, and projects that reflect my expertise and dedication to GIS and spatial analysis.
+Welcome to my GIS portfolio. This site was personally built using HTML, CSS, and JavaScript. Here, you’ll find my résumé, professional experience, education, and projects that showcase my expertise and commitment to GIS and spatial analysis.
 
 <img src="Images/gis.jpg" alt="Portfolio preview" title="Portfolio preview">
