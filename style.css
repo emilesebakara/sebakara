@@ -20,7 +20,7 @@ body {
 
 .name{
     height: 100vh; 
-    background-image: url("images/background.jpg");
+    background-image: url("Images/background.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
