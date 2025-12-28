@@ -2631,3 +2631,12 @@ input, select, textarea {
 				}
 
 	}
+/* About section profile image resizing */
+#about .image.featured img {
+  width: 220px;          /* adjust size here */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 1.5em;  /* centers the image */
+  border-radius: 50%;    /* optional: circular photo */
+}
