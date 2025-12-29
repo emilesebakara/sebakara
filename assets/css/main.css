@@ -2651,3 +2651,15 @@ input, select, textarea {
   object-fit: cover;   /* KEY LINE */
   border-radius: 50%;  /* keeps it circular */
 }
+/* Force background image on Intro section */
+#top {
+  background-image: url("../../images/background.jpg") !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Disable Prologue overlay */
+#top:before {
+  display: none !important;
+}
