@@ -11,18 +11,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"crossorigin="anonymous">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-		<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+		<link rel="icon" type="image/png" href="gis-favicon.png">
 		<style>
-  body {
-    background-image: url("images/background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+    body {
+        background-image: url("images/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .dashboard-preview {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
 </style>
 	</head>
 	<body class="is-preload">
@@ -34,9 +37,9 @@
 
 					<!-- Logo -->
 						<div id="logo">
-							<span class="image avatar48"><img src="images/profile.jpg" alt="" /></span>
+							<span class="image avatar48"><img src="images/profile.jpeg" alt="" /></span>
 							<h1 id="title">Emile S. Sebakara</h1>
-							<p>	GIS Analyst & Developer</p>
+							<p>	GIS Analyst | Remote Sensing | Environmental Specialist</p>
 						</div>
 
 					<!-- Nav -->
@@ -52,6 +55,12 @@
 				</div>
 
 				<div class="bottom">
+					<div class="nature-video">
+    <video autoplay muted loop playsinline>
+        <source src="Congo_River.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
 					<!-- Social Icons -->
 						<ul class="icons">
@@ -72,14 +81,17 @@
 						<div class="container">
 
 							<header>
-								<h2 class="alt">Hi! I'm <strong>Emile S. Sebakara</strong>, a GIS Analayst & Developer <br />
-								site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
-								<p>Ligula scelerisque justo sem accumsan diam quis<br />
-								vitae natoque dictum sollicitudin elementum.</p>
-							</header>
+    <h2 class="alt">
+        <strong>Where Data Meets Place</strong>
+    </h2>
+
+    <p>
+        A collection of spatial analyses, environmental assessments, maps, and interactive visualizations..
+    </p>
+</header>
 
 							<footer>
-								<a href="#portfolio" class="button scrolly">Dive in</a>
+								<a href="#portfolio" class="button scrolly">Explore My Work</a>
 							</footer>
 
 						</div>
@@ -90,67 +102,130 @@
 						<div class="container">
 
 							<header>
-								<h2> My GIS Portfolio</h2>
+								<h2> GIS, Remote Sensing & Environmental Analysis</h2>
 							</header>
 
-							<p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
-							egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
-							Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis
-							fusce hendrerit lacus ridiculus.</p>
+							<p>Explore a selection of my GIS, remote sensing, and environmental analysis projects, including interactive dashboards, spatial analyses, maps, and research outputs. Each project shows how I use geospatial data and analytical tools to understand environmental and development challenges and support evidence-based decision-making.</p>
 
 							<div class="row">
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-  <a href="LULC_Article.pdf" target="_blank" rel="noopener">
-    <span class="image fit">
-      <img src="Ngweshe_LULC.png" alt="LULC analysis Ngweshe" />
-    </span>
-    <header>
-      <h3>Evaluating Land Use and Land Cover Dynamics (Ngweshe, DRC)</h3>
-    </header>
-  </a>
-</article>
-									
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-										<header>
-											<h3>Rhoncus Semper</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-										<header>
-											<h3>Magna Nullam</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-										<header>
-											<h3>Natoque Vitae</h3>
-										</header>
-									</article>
-								</div>
-								<div class="col-4 col-12-mobile">
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-										<header>
-											<h3>Dolor Penatibus</h3>
-										</header>
-									</article>
-									<article class="item">
-										<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-										<header>
-											<h3>Orci Convallis</h3>
-										</header>
-									</article>
-								</div>
-							</div>
+								<div class="row">
 
-						</div>
+    <!-- 1. Elephant GPS Telemetry -->
+    <div class="col-4 col-12-mobile">
+        <article class="item">
+
+            <a href="Chobe_telemetry.png"
+               class="image fit lightbox">
+
+                <img src="Chobe_telemetry.png"
+                     alt="Elephant GPS Telemetry Analysis" />
+
+            </a>
+
+            <header>
+                <h3>Elephant GPS Telemetry Analysis</h3>
+            </header>
+
+        </article>
+    </div>
+
+
+    <!-- 2. Whale Shark Telemetry -->
+    <div class="col-4 col-12-mobile">
+        <article class="item">
+
+            <a href="Whales_Shark.png"
+               class="image fit lightbox">
+
+                <img src="Whales_Shark.png"
+                     alt="Whale Shark Telemetry: Mafia Island" />
+
+            </a>
+
+            <header>
+                <h3>Whale Shark Telemetry: Mafia Island</h3>
+            </header>
+
+        </article>
+    </div>
+
+
+    <!-- 3. Bukavu Flood Mapping -->
+    <div class="col-4 col-12-mobile">
+        <article class="item">
+
+            <a href="spd.png"
+               class="image fit lightbox">
+
+                <img src="spd.png"
+                     alt="Bukavu Flood Mapping" />
+
+            </a>
+
+            <header>
+                <h3>Bukavu Flood Mapping</h3>
+            </header>
+
+        </article>
+    </div>
+
+
+    <!-- 4. Kenya Protected Areas Dashboard -->
+    <div class="col-8 col-12-mobile">
+        <article class="item">
+
+            <a href="https://rcmrdtraining.maps.arcgis.com/apps/dashboards/e1db3b98c43f48cf8610e025fe5dc58e"
+               target="_blank"
+               rel="noopener">
+
+                <span class="image fit">
+                    <img class="dashboard-preview"
+                         src="ArcGIS_Dashboard.png"
+                         alt="Interactive ArcGIS Dashboard" />
+                </span>
+
+                <header>
+                    <h3>
+                        Kenya Protected and Conserved Areas - ArcGIS Dashboard
+                    </h3>
+                </header>
+
+            </a>
+
+        </article>
+    </div>
+
+
+    <!-- 5. Ngweshe Land Use / Land Cover -->
+    <div class="col-4 col-12-mobile">
+        <article class="item">
+
+            <span class="image fit lightbox">
+                <img src="Ngweshe_LULC.png"
+                     alt="Land Use and Land Cover Dynamics in Ngweshe, DRC" />
+            </span>
+
+            <header>
+                <h3>
+                    Evaluating Land Use and Land Cover Dynamics (Ngweshe, DRC)
+                </h3>
+
+                <p>
+                    <a href="LULC_Article.pdf"
+                       target="_blank"
+                       rel="noopener">
+
+                        <i class="fa fa-file-pdf-o"></i>
+                        View Full Report (PDF)
+
+                    </a>
+                </p>
+            </header>
+
+        </article>
+    </div>
+
+</div>
 					</section>
 
 				<!-- About Me -->
@@ -161,12 +236,9 @@
 								<h2>About Me</h2>
 							</header>
 
-							<a href="#" class="image featured"><img src="images/about.jpeg" alt="" /></a>
+							<a href="#" class="image featured"><img src="images/Mr_Emile.jpg" alt="" /></a>
 
-							<p>I am a geospatial and environmental professional working at the intersection of GIS, remote sensing, conservation, and climate resilience. My experience includes forest cover change analysis, deforestation monitoring, and landscape-level planning across the Democratic Republic of Congo and Uganda.
-With a background in agronomy and natural resource management, I approach spatial analysis with a strong understanding of land-use systems, community livelihoods, and ecological balance. I use geospatial tools not only to map patterns but also to support practical, evidence-based decisions for biodiversity conservation and sustainable land management.
-I am particularly interested in applying GIS and remote sensing to real-world conservation challenges and in developing clear, well-documented spatial projects that translate data into action.
-.</p>
+							<p>I am a professional in the field of geospatial analysis and the environment, working at the point where GIS, remote sensing, conservation, and climate resilience meet. My experience has involved carrying out analysis of changes in forest cover, monitoring deforestation, and engaging in landscape-level planning in both the Democratic Republic of Congo and Uganda. Since I have a background in agronomy and natural resource management, I bring a solid understanding of land-use systems, the livelihoods of local communities, and ecological balance to my work with spatial analysis. I apply geospatial techniques both for mapping patterns and for helping to make practical, evidence-based decisions regarding biodiversity conservation and sustainable land management. I am especially interested in using GIS and remote sensing to address real-world conservation problems and in creating spatial projects that are clear and well documented so that the data can be turned into action.</p>
 
 						</div>
 					</section>
@@ -179,10 +251,7 @@ I am particularly interested in applying GIS and remote sensing to real-world co
 								<h2>Contact</h2>
 							</header>
 
-							<p>Elementum sem parturient nulla quam placerat viverra
-							mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia
-							donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc
-							orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+							<p>For professional inquiries, collaborations, or project discussions, feel free to get in touch.</p>
 
 							<form method="post" action="#">
 								<div class="row">
@@ -207,7 +276,7 @@ I am particularly interested in applying GIS and remote sensing to real-world co
 
 				<!-- Copyright -->
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; For the Best</li> <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 
 			</div>

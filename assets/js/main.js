@@ -121,3 +121,64 @@
 				});
 
 })(jQuery);
+// Image Lightbox
+document.addEventListener("DOMContentLoaded", function () {
+
+    const lightboxLinks = document.querySelectorAll(".lightbox");
+
+    if (!lightboxLinks.length) return;
+
+    const overlay = document.createElement("div");
+    overlay.className = "lightbox-overlay";
+
+    const image = document.createElement("img");
+    image.alt = "";
+
+    const closeButton = document.createElement("span");
+    closeButton.className = "lightbox-close";
+    closeButton.innerHTML = "&times;";
+    closeButton.setAttribute("aria-label", "Close image");
+
+    overlay.appendChild(image);
+    overlay.appendChild(closeButton);
+    document.body.appendChild(overlay);
+
+    lightboxLinks.forEach(function (link) {
+
+        link.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const thumbnail = link.querySelector("img");
+
+            if (!thumbnail) return;
+
+            image.src = thumbnail.src;
+            image.alt = thumbnail.alt || "Portfolio project";
+
+            overlay.classList.add("active");
+        });
+
+    });
+
+    closeButton.addEventListener("click", function () {
+        overlay.classList.remove("active");
+    });
+
+    overlay.addEventListener("click", function (event) {
+
+        if (event.target === overlay) {
+            overlay.classList.remove("active");
+        }
+
+    });
+
+    document.addEventListener("keydown", function (event) {
+
+        if (event.key === "Escape") {
+            overlay.classList.remove("active");
+        }
+
+    });
+
+});
