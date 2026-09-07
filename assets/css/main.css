@@ -2760,8 +2760,20 @@ input, select, textarea {
 /* Mobile header adjustment */
 @media screen and (max-width: 736px) {
 
+    #logo {
+        min-height: 80px;
+        padding-left: 65px;
+    }
+
+    #logo h1 {
+        padding-top: 2px;
+    }
+
     #logo p {
-        padding-left: 55px;
+        padding-left: 0;
+        margin-top: 8px;
+        line-height: 1.4em;
+        max-width: 230px;
     }
 
 }
