@@ -2757,3 +2757,11 @@ input, select, textarea {
 .lightbox-close:hover {
     color: #ccc;
 }
+/* Mobile header adjustment */
+@media screen and (max-width: 736px) {
+
+    #logo p {
+        padding-left: 55px;
+    }
+
+}
