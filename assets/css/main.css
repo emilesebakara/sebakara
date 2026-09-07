@@ -2777,3 +2777,11 @@ input, select, textarea {
     }
 
 }
+/* Make homepage banner text bold */
+#main > section.one header h2 {
+    font-weight: 700;
+}
+
+#main > section.one header p {
+    font-weight: 700;
+}
