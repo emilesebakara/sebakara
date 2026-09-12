@@ -2826,10 +2826,11 @@ input, select, textarea {
 /* Professional Project Filter */
 .project-filter {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 0.8em;
     margin: 2em 0 2.5em 0;
+    padding-right: 1em;
 }
 
 .project-filter label {
