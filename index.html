@@ -135,13 +135,17 @@
 							</header>
 
 							<p>Explore a selection of my GIS, remote sensing, and environmental analysis projects, including interactive dashboards, spatial analyses, maps, and research outputs. Each project shows how I use geospatial data and analytical tools to understand environmental and development challenges and support evidence-based decision-making.</p>
-                            <!-- Project Filters -->
-<div class="project-filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="conservation">Conservation</button>
-    <button class="filter-btn" data-filter="remote-sensing">Remote Sensing</button>
-    <button class="filter-btn" data-filter="spatial-analysis">Spatial Analysis</button>
-    <button class="filter-btn" data-filter="interactive">Interactive</button>
+                            <!-- Project Filter -->
+<div class="project-filter">
+    <label for="project-category">Explore projects by interest:</label>
+
+    <select id="project-category">
+        <option value="all">All Projects</option>
+        <option value="conservation">Conservation</option>
+        <option value="remote-sensing">Remote Sensing</option>
+        <option value="spatial-analysis">Spatial Analysis</option>
+        <option value="interactive">Interactive</option>
+    </select>
 </div>
 
 							<div class="row">
