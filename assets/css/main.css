@@ -2797,3 +2797,29 @@ input, select, textarea {
         ),
         url("../../images/banner.jpg");
 }
+/* Professional project card typography */
+#portfolio .item header h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #333333;
+    line-height: 1.4em;
+    margin-bottom: 0.8em;
+}
+
+#portfolio .item header p {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #777777;
+    line-height: 1.6em;
+    margin-bottom: 0.8em;
+}
+
+#portfolio .item header p a {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #666666;
+}
+
+#portfolio .item header p a:hover {
+    color: #222222;
+}
