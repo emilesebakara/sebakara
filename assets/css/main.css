@@ -2823,3 +2823,39 @@ input, select, textarea {
 #portfolio .item header p a:hover {
     color: #222222;
 }
+/* Professional Project Filter */
+.project-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8em;
+    margin: 2em 0 2.5em 0;
+}
+
+.project-filter label {
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #666666;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.project-filter select {
+    width: 220px;
+    height: 42px;
+    margin: 0;
+    padding: 0 2.5em 0 1em;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
+    background-color: #ffffff;
+    color: #555555;
+    font-size: 0.85em;
+    font-weight: 500;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.project-filter select:focus {
+    border-color: #777777;
+    outline: none;
+}
