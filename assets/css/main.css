@@ -2823,99 +2823,40 @@ input, select, textarea {
 #portfolio .item header p a:hover {
     color: #222222;
 }
-/* =========================================
-   PROFESSIONAL PROJECT FILTER
-   ========================================= */
-
-.project-filters {
+/* Professional Project Filter */
+.project-filter {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 12px;
-    margin: 2.5em 0 2.8em 0;
+    gap: 0.8em;
+    margin: 2em 0 2.5em 0;
     padding-right: 1em;
 }
 
-/* Filter label */
-.project-filters::before {
-    content: "Explore projects by interest:";
-    font-size: 0.9em;
+.project-filter label {
+    font-size: 0.85em;
     font-weight: 500;
-    color: #555;
+    color: #666666;
+    margin: 0;
     letter-spacing: 0.02em;
 }
 
-/* Dropdown */
-.project-filters select {
-    width: 230px;
-    height: 48px;
-    padding: 0 42px 0 16px;
-
-    border: 1px solid #b8c9c7;
-    border-radius: 6px;
-
+.project-filter select {
+    width: 220px;
+    height: 42px;
+    margin: 0;
+    padding: 0 2.5em 0 1em;
+    border: 1px solid #b8b8b8;
+    border-radius: 3px;
     background-color: #ffffff;
-    color: #405b59;
-
-    font-family: inherit;
-    font-size: 0.9em;
+    color: #555555;
+    font-size: 0.85em;
     font-weight: 500;
-
+    line-height: 42px;
     cursor: pointer;
-
-    /* Soft elevation */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-
-    /* Smooth animation */
-    transition:
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.2s ease,
-        background-color 0.25s ease;
 }
 
-/* Hover */
-.project-filters select:hover {
-    border-color: #78aaa6;
-    background-color: #f8fbfa;
-    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.09);
-    transform: translateY(-1px);
-}
-
-/* When selected / focused */
-.project-filters select:focus {
+.project-filter select:focus {
+    border-color: #777777;
     outline: none;
-    border-color: #5f9995;
-    box-shadow:
-        0 0 0 3px rgba(95, 153, 149, 0.15),
-        0 5px 16px rgba(0, 0, 0, 0.08);
-}
-
-/* Dropdown options */
-.project-filters select option {
-    background: #ffffff;
-    color: #405b59;
-    font-size: 0.95em;
-    padding: 10px;
-}
-
-/* Mobile */
-@media screen and (max-width: 736px) {
-
-    .project-filters {
-        justify-content: center;
-        flex-direction: column;
-        gap: 10px;
-        margin: 2em 0;
-        padding-right: 0;
-    }
-
-    .project-filters::before {
-        font-size: 0.85em;
-    }
-
-    .project-filters select {
-        width: 100%;
-        max-width: 280px;
-    }
 }
