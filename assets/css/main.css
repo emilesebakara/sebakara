@@ -2923,49 +2923,92 @@ input, select, textarea {
     }
 }
 /* ========================================
-   PORTFOLIO FILTER
+   PROFESSIONAL PORTFOLIO FILTER
    ======================================== */
 
 .portfolio-filter {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 12px;
-    margin: 2em 0 2.5em;
+    gap: 14px;
+    margin: 2.2em 0 2.5em;
+    padding-right: 0;
 }
 
+/* Filter label */
 .portfolio-filter-label {
     font-size: 0.95em;
-    color: #555;
+    font-weight: 500;
+    color: #526b6b;
+    letter-spacing: 0.01em;
     margin: 0;
 }
 
+/* Dropdown */
 .portfolio-filter-select {
-    width: 240px;
-    height: 48px;
-    padding: 0 14px;
-    border: 1px solid #c8d0d0;
-    border-radius: 6px;
-    background: #ffffff;
-    color: #444;
+    width: 250px;
+    height: 50px;
+    margin: 0;
+    padding: 0 42px 0 17px;
+
+    border: 1px solid #9dbbbb;
+    border-radius: 7px;
+
+    background-color: #ffffff;
+    color: #315858;
+
     font-size: 0.95em;
+    font-weight: 500;
+
     cursor: pointer;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+    box-shadow: 0 3px 12px rgba(45, 85, 85, 0.08);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
 
+/* Hover */
 .portfolio-filter-select:hover {
-    border-color: #7faeae;
+    border-color: #5f9999;
+    box-shadow: 0 5px 16px rgba(45, 85, 85, 0.14);
 }
 
+/* When selected / focused */
 .portfolio-filter-select:focus {
     outline: none;
-    border-color: #6fa3a3;
-    box-shadow: 0 0 0 3px rgba(111, 163, 163, 0.15);
+    border-color: #4f8989;
+    box-shadow:
+        0 0 0 3px rgba(79, 137, 137, 0.15),
+        0 5px 16px rgba(45, 85, 85, 0.12);
 }
 
-/* Smooth project filtering */
+/* Project cards */
 .project-card {
     transition:
-        opacity 0.2s ease,
-        transform 0.2s ease;
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+/* Mobile */
+@media screen and (max-width: 736px) {
+
+    .portfolio-filter {
+        justify-content: center;
+        flex-direction: column;
+        gap: 8px;
+        margin: 1.5em 0 2em;
+    }
+
+    .portfolio-filter-label {
+        text-align: center;
+    }
+
+    .portfolio-filter-select {
+        width: 100%;
+        max-width: 320px;
+    }
+
 }
