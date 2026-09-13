@@ -3012,3 +3012,122 @@ input, select, textarea {
     }
 
 }
+/* ========================================
+   COLORFUL PROJECT CARDS
+   ======================================== */
+
+/* Base project card */
+#portfolio .project-card .item {
+    background: #ffffff;
+    border: 1px solid #dce8e7;
+    border-radius: 8px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 14px rgba(40, 75, 75, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Colored top edge */
+#portfolio .project-card .item::before {
+    content: "";
+    display: block;
+    height: 4px;
+    background: #5f9999;
+}
+
+/* Hover effect */
+#portfolio .project-card .item:hover {
+    transform: translateY(-5px);
+    border-color: #9fc4c3;
+
+    box-shadow:
+        0 10px 25px rgba(40, 75, 75, 0.14);
+}
+
+/* Project image */
+#portfolio .project-card .image {
+    margin: 0;
+}
+
+/* Project information area */
+#portfolio .project-card header {
+    padding: 1.4em 1.3em 1.5em;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #f7fbfa 100%
+    );
+}
+
+/* Project title */
+#portfolio .project-card header h3 {
+    color: #254f50;
+    font-weight: 600;
+    font-size: 1.08em;
+    line-height: 1.4em;
+    margin-bottom: 0.7em;
+}
+
+/* Description */
+#portfolio .project-card .project-description {
+    color: #687878;
+    font-size: 0.88em;
+    line-height: 1.55em;
+    margin-bottom: 0.9em;
+}
+
+/* Project links */
+#portfolio .project-card header a {
+    color: #4f8585;
+    font-weight: 500;
+    border-bottom: 1px dotted #9bbbbb;
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* Link hover */
+#portfolio .project-card header a:hover {
+    color: #245858;
+    border-bottom-color: #4f8585;
+}
+
+
+/* ========================================
+   DIFFERENT ACCENT COLORS BY PROJECT TYPE
+   ======================================== */
+
+/* Conservation */
+#portfolio .project-card[data-category~="conservation"] .item::before {
+    background: #5f9b72;
+}
+
+/* Remote Sensing */
+#portfolio .project-card[data-category~="remote-sensing"] .item::before {
+    background: #5f8fa8;
+}
+
+/* Spatial Analysis */
+#portfolio .project-card[data-category~="spatial-analysis"] .item::before {
+    background: #8a7aa8;
+}
+
+/* Interactive */
+#portfolio .project-card[data-category~="interactive"] .item::before {
+    background: #c28a55;
+}
+
+
+/* ========================================
+   FILTERED PROJECT ANIMATION
+   ======================================== */
+
+#portfolio .project-card {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
