@@ -182,3 +182,39 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+/* ========================================
+   PROJECT CATEGORY FILTER
+   ======================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const filter = document.getElementById("project-category");
+    const projects = document.querySelectorAll(".project-card");
+
+    if (!filter || !projects.length) return;
+
+    filter.addEventListener("change", function () {
+
+        const selectedCategory = this.value;
+
+        projects.forEach(function (project) {
+
+            const categories = project.dataset.category
+                ? project.dataset.category.split(" ")
+                : [];
+
+            if (
+                selectedCategory === "all" ||
+                categories.includes(selectedCategory)
+            ) {
+                project.style.display = "";
+                project.style.opacity = "1";
+            } else {
+                project.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
