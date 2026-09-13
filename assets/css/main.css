@@ -2823,76 +2823,102 @@ input, select, textarea {
 #portfolio .item header p a:hover {
     color: #222222;
 }
-/* Professional Project Filter */
-.project-filter {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.8em;
-    margin: 2em 0 2.5em 0;
-    padding-right: 1em;
+/* =========================================
+   PORTFOLIO FILTER
+   ========================================= */
+
+.portfolio-filter {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 14px !important;
+
+    width: 100% !important;
+    margin: 2em 0 2.5em 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
 }
 
-.project-filter label {
-    font-size: 0.85em;
-    font-weight: 500;
-    color: #666666;
-    margin: 0;
-    letter-spacing: 0.02em;
+/* Label */
+.portfolio-filter-label {
+    display: inline-block !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    color: #526765 !important;
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.02em !important;
+    line-height: 46px !important;
 }
 
-.project-filter select {
-    width: 220px;
-    height: 42px;
-    margin: 0;
-    padding: 0 2.5em 0 1em;
-    border: 1px solid #b8b8b8;
-    border-radius: 3px;
-    background-color: #ffffff;
-    color: #555555;
-    font-size: 0.85em;
-    font-weight: 500;
-    line-height: 42px;
-    cursor: pointer;
+/* Dropdown */
+.portfolio-filter-select {
+    display: block !important;
+
+    width: 220px !important;
+    height: 46px !important;
+
+    margin: 0 !important;
+    padding: 0 38px 0 14px !important;
+
+    border: 1px solid #b7cbc8 !important;
+    border-radius: 6px !important;
+
+    background-color: #ffffff !important;
+    color: #405c59 !important;
+
+    font-family: inherit !important;
+    font-size: 0.85em !important;
+    font-weight: 500 !important;
+
+    cursor: pointer !important;
+
+    box-sizing: border-box !important;
+
+    appearance: auto;
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease !important;
 }
 
-.project-filter select:focus {
-    border-color: #777777;
-    outline: none;
-}/* Professional Project Filter */
-.project-filter {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.8em;
-    margin: 2em 0 2.5em 0;
-    padding-right: 1em;
+/* Hover */
+.portfolio-filter-select:hover {
+    border-color: #6f9f9b !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-1px) !important;
 }
 
-.project-filter label {
-    font-size: 0.85em;
-    font-weight: 500;
-    color: #666666;
-    margin: 0;
-    letter-spacing: 0.02em;
+/* Focus */
+.portfolio-filter-select:focus {
+    outline: none !important;
+    border-color: #5f9995 !important;
+    box-shadow: 0 0 0 3px rgba(95, 153, 149, 0.12) !important;
 }
 
-.project-filter select {
-    width: 220px;
-    height: 42px;
-    margin: 0;
-    padding: 0 2.5em 0 1em;
-    border: 1px solid #b8b8b8;
-    border-radius: 3px;
-    background-color: #ffffff;
-    color: #555555;
-    font-size: 0.85em;
-    font-weight: 500;
-    line-height: 42px;
-    cursor: pointer;
-}
+/* Mobile */
+@media screen and (max-width: 736px) {
 
-.project-filter select:focus {
-    border-color: #777777;
-    outline: none;
+    .portfolio-filter {
+        justify-content: center !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        margin: 1.5em 0 2em 0 !important;
+    }
+
+    .portfolio-filter-label {
+        line-height: normal !important;
+    }
+
+    .portfolio-filter-select {
+        width: 240px !important;
+    }
 }
