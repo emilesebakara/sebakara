@@ -183,15 +183,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 /* ========================================
-   PROJECT CATEGORY FILTER
+   PORTFOLIO PROJECT FILTER
    ======================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const filter = document.getElementById("project-category");
+    const filter = document.getElementById("portfolio-category");
     const projects = document.querySelectorAll(".project-card");
 
-    if (!filter || !projects.length) return;
+    if (!filter || !projects.length) {
+        return;
+    }
 
     filter.addEventListener("change", function () {
 
@@ -199,18 +201,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
         projects.forEach(function (project) {
 
-            const categories = project.dataset.category
-                ? project.dataset.category.split(" ")
-                : [];
+            const categories = (
+                project.getAttribute("data-category") || ""
+            ).split(" ");
 
             if (
                 selectedCategory === "all" ||
                 categories.includes(selectedCategory)
             ) {
+
                 project.style.display = "";
-                project.style.opacity = "1";
+
+                setTimeout(function () {
+                    project.style.opacity = "1";
+                    project.style.transform = "translateY(0)";
+                }, 10);
+
             } else {
-                project.style.display = "none";
+
+                project.style.opacity = "0";
+                project.style.transform = "translateY(10px)";
+
+                setTimeout(function () {
+                    project.style.display = "none";
+                }, 200);
+
             }
 
         });
