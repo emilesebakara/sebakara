@@ -2922,3 +2922,50 @@ input, select, textarea {
         width: 240px !important;
     }
 }
+/* ========================================
+   PORTFOLIO FILTER
+   ======================================== */
+
+.portfolio-filter {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin: 2em 0 2.5em;
+}
+
+.portfolio-filter-label {
+    font-size: 0.95em;
+    color: #555;
+    margin: 0;
+}
+
+.portfolio-filter-select {
+    width: 240px;
+    height: 48px;
+    padding: 0 14px;
+    border: 1px solid #c8d0d0;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #444;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-filter-select:hover {
+    border-color: #7faeae;
+}
+
+.portfolio-filter-select:focus {
+    outline: none;
+    border-color: #6fa3a3;
+    box-shadow: 0 0 0 3px rgba(111, 163, 163, 0.15);
+}
+
+/* Smooth project filtering */
+.project-card {
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
