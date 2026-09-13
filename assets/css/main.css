@@ -2696,167 +2696,110 @@ input, select, textarea {
 #portfolio .item:hover h3 {
     color: #000000;
 }
-/* ========================================
-   NATURE VIDEO - SIDEBAR
-   ======================================== */
+/* =========================================
+   PROJECT FILTER — PROFESSIONAL DESIGN
+   ========================================= */
 
-.nature-video {
-    width: 90%;
-    margin: 30px auto 20px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.nature-video video {
-    display: block;
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-/* Chobe Image Lightbox */
-.lightbox-overlay {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-    box-sizing: border-box;
-}
-
-.lightbox-overlay.active {
-    display: flex;
-}
-
-.lightbox-overlay img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    color: white;
-    font-size: 40px;
-    font-weight: 300;
-    cursor: pointer;
-    line-height: 1;
-    z-index: 10000;
-}
-
-.lightbox-close:hover {
-    color: #ccc;
-}
-/* Mobile header adjustment */
-@media screen and (max-width: 736px) {
-
-    #logo {
-        min-height: 80px;
-        padding-left: 65px;
-    }
-
-    #logo h1 {
-        padding-top: 2px;
-    }
-
-    #logo p {
-        padding-left: 0;
-        margin-top: 8px;
-        line-height: 1.4em;
-        max-width: 230px;
-    }
-
-}
-/* Homepage banner text readability */
-#banner header h2 {
-    font-weight: 700 !important;
-    color: #ffffff !important;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85);
-}
-
-#banner header p {
-    font-weight: 600 !important;
-    color: #ffffff !important;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.85);
-}
-#main > section.one {
-    background-image:
-        linear-gradient(
-            rgba(0, 0, 0, 0.22),
-            rgba(0, 0, 0, 0.22)
-        ),
-        url("../../images/banner.jpg");
-}
-/* Professional project card typography */
-#portfolio .item header h3 {
-    font-size: 1.15em;
-    font-weight: 600;
-    color: #333333;
-    line-height: 1.4em;
-    margin-bottom: 0.8em;
-}
-
-#portfolio .item header p {
-    font-size: 0.9em;
-    font-weight: 400;
-    color: #777777;
-    line-height: 1.6em;
-    margin-bottom: 0.8em;
-}
-
-#portfolio .item header p a {
-    font-size: 0.9em;
-    font-weight: 500;
-    color: #666666;
-}
-
-#portfolio .item header p a:hover {
-    color: #222222;
-}
-/* Professional Project Filter */
-.project-filter {
+.project-filter-bar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 0.8em;
-    margin: 2em 0 2.5em 0;
-    padding-right: 1em;
+    gap: 14px;
+
+    margin: 2.5em 0 2.8em 0;
+    padding-right: 0.5em;
 }
 
-.project-filter label {
-    font-size: 0.85em;
-    font-weight: 500;
-    color: #666666;
+/* Filter label */
+.project-filter-bar label {
     margin: 0;
+    color: #526765;
+    font-size: 0.9em;
+    font-weight: 500;
     letter-spacing: 0.02em;
 }
 
-.project-filter select {
-    width: 220px;
-    height: 42px;
-    margin: 0;
-    padding: 0 2.5em 0 1em;
-    border: 1px solid #b8b8b8;
-    border-radius: 3px;
+/* Dropdown */
+.project-filter {
+    width: 225px;
+    height: 48px;
+
+    padding: 0 42px 0 16px;
+
+    border: 1px solid #b7cbc8;
+    border-radius: 7px;
+
     background-color: #ffffff;
-    color: #555555;
-    font-size: 0.85em;
+    color: #405c59;
+
+    font-family: inherit;
+    font-size: 0.9em;
     font-weight: 500;
-    line-height: 42px;
+
     cursor: pointer;
+
+    /* Remove browser default styling */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    /* Custom dropdown arrow */
+    background-image: linear-gradient(45deg, transparent 50%, #5f8f8b 50%),
+                      linear-gradient(135deg, #5f8f8b 50%, transparent 50%);
+    background-position: calc(100% - 19px) 21px,
+                         calc(100% - 13px) 21px;
+    background-size: 6px 6px,
+                     6px 6px;
+    background-repeat: no-repeat;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
 }
 
-.project-filter select:focus {
-    border-color: #777777;
+/* Hover */
+.project-filter:hover {
+    border-color: #76a8a3;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
+    transform: translateY(-1px);
+}
+
+/* Focus / selected */
+.project-filter:focus {
     outline: none;
+    border-color: #5f9995;
+
+    box-shadow:
+        0 0 0 3px rgba(95, 153, 149, 0.14),
+        0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Dropdown options */
+.project-filter option {
+    color: #405c59;
+    background: #ffffff;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media screen and (max-width: 736px) {
+
+    .project-filter-bar {
+        justify-content: center;
+        flex-direction: column;
+        gap: 9px;
+
+        margin: 2em 0;
+        padding-right: 0;
+    }
+
+    .project-filter {
+        width: 100%;
+        max-width: 280px;
+    }
 }
