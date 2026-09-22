@@ -3171,7 +3171,7 @@ input, select, textarea {
     justify-content: center;
     gap: 12px;
     flex: 1;
-    padding: 16px 20px;
+    padding: 12px 18px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.55);
@@ -3231,4 +3231,13 @@ input, select, textarea {
         height: 140px !important;
         min-height: 140px !important;
     }
+}
+/* Ensure WhatsApp icon displays correctly */
+.direct-contact-link .fa-whatsapp {
+    font-family: FontAwesome !important;
+    font-size: 1.6em;
+}
+
+.direct-contact-link .fa-whatsapp:before {
+    content: "\f232";
 }
