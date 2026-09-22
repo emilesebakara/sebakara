@@ -3241,3 +3241,7 @@ input, select, textarea {
 .direct-contact-link .fa-whatsapp:before {
     content: "\f232";
 }
+.direct-contact h3 {
+    font-size: 1.25em;
+    margin-bottom: 18px;
+}
