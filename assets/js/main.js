@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 /* ========================================
-   PORTFOLIO PROJECT FILTER
+   PORTFOLIO PROJECT FILTER + CURATED VIEWS
    ======================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -191,13 +191,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const filter = document.getElementById("portfolio-category");
     const projects = document.querySelectorAll(".project-card");
 
-    if (!filter || !projects.length) {
+    if (!projects.length) {
         return;
     }
 
-    filter.addEventListener("change", function () {
-
-        const selectedCategory = this.value;
+    function showProjects(selectedCategory) {
 
         projects.forEach(function (project) {
 
@@ -205,10 +203,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 project.getAttribute("data-category") || ""
             ).split(" ");
 
-            if (
+            const shouldShow =
                 selectedCategory === "all" ||
-                categories.includes(selectedCategory)
-            ) {
+                categories.includes(selectedCategory);
+
+            if (shouldShow) {
 
                 project.style.display = "";
 
@@ -225,11 +224,52 @@ document.addEventListener("DOMContentLoaded", function () {
                 setTimeout(function () {
                     project.style.display = "none";
                 }, 200);
-
             }
+        });
+    }
+
+
+    /* ========================================
+       CURATED PORTFOLIO VIEWS
+       ======================================== */
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedView = urlParams.get("view");
+
+    const validViews = [
+        "conservation",
+        "remote-sensing",
+        "spatial-analysis",
+        "interactive"
+    ];
+
+    if (selectedView && validViews.includes(selectedView)) {
+
+        showProjects(selectedView);
+
+        /* Hide the filter when a curated
+           portfolio view is being displayed */
+        const filterContainer =
+            document.querySelector(".portfolio-filter");
+
+        if (filterContainer) {
+            filterContainer.style.display = "none";
+        }
+    }
+
+
+    /* ========================================
+       NORMAL PORTFOLIO FILTER
+       ======================================== */
+
+    if (filter) {
+
+        filter.addEventListener("change", function () {
+
+            showProjects(this.value);
 
         });
 
-    });
+    }
 
 });
